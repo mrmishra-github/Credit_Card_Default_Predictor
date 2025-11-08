@@ -58,7 +58,7 @@ education_options = {
 }
 marriage_options = {"Married": 1, "Single": 2, "Others": 3}
 
-LIMIT_BAL = st.sidebar.number_input("💰 Credit Limit (NTD)", 10000, 1000000, 200000, step=10000)
+LIMIT_BAL = st.sidebar.number_input("💰 Credit Limit ($USD)", 10000, 1000000, 200000, step=10000)
 SEX = sex_options[st.sidebar.selectbox("👤 Gender", list(sex_options.keys()))]
 EDUCATION = education_options[st.sidebar.selectbox("🎓 Education Level", list(education_options.keys()))]
 MARRIAGE = marriage_options[st.sidebar.selectbox("💍 Marital Status", list(marriage_options.keys()))]
@@ -74,7 +74,7 @@ PAY_5 = st.sidebar.slider("May", -2, 8, 0)
 PAY_6 = st.sidebar.slider("April", -2, 8, 0)
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("💵 Bill Amounts (NTD)")
+st.sidebar.subheader("💵 Bill Amounts ($USD)")
 BILL_AMT1 = st.sidebar.number_input("September Bill", 0, 1000000, 50000)
 BILL_AMT2 = st.sidebar.number_input("August Bill", 0, 1000000, 48000)
 BILL_AMT3 = st.sidebar.number_input("July Bill", 0, 1000000, 46000)
@@ -83,7 +83,7 @@ BILL_AMT5 = st.sidebar.number_input("May Bill", 0, 1000000, 44000)
 BILL_AMT6 = st.sidebar.number_input("April Bill", 0, 1000000, 42000)
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("💸 Payment Amounts (NTD)")
+st.sidebar.subheader("💸 Payment Amounts ($USD)")
 PAY_AMT1 = st.sidebar.number_input("September Payment", 0, 1000000, 20000)
 PAY_AMT2 = st.sidebar.number_input("August Payment", 0, 1000000, 18000)
 PAY_AMT3 = st.sidebar.number_input("July Payment", 0, 1000000, 16000)
@@ -175,3 +175,4 @@ with st.expander("ℹ️ About This App"):
     - Derived features like `PAY_RATIO`, `UTILIZATION`, and `AVG_BILL_AMT` are auto-calculated.  
     - Models trained using **XGBoost, LightGBM, RandomForest**, and an ensemble **Stacking model**.  
     """)
+
